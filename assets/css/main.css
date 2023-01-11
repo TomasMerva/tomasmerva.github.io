@@ -1769,6 +1769,11 @@ input, select, textarea {
 		.image.profil {
 			width: 30%;
 		}
+
+		.image.project {
+			width: 240px;
+			height: 272px;
+		}
 		/* .image.profil {
 			border-radius: 30%;
 		}
@@ -1976,6 +1981,8 @@ input, select, textarea {
 		-webkit-transition: background-color 0.35s ease-in-out;
 		-ms-transition: background-color 0.35s ease-in-out;
 		transition: background-color 0.35s ease-in-out;
+		margin-right: 12px;
+		
 	}
 
 		input[type="button"]:hover,
@@ -2647,4 +2654,36 @@ input, select, textarea {
 					margin-top: 0;
 				}
 
+	}
+
+	#collapse-button-container {
+		display: flex;
+		/* justify-content: space-between; */
+		width: 20px;
+		height: 60px;
+	}
+
+	#text-box {
+		display: block;
+		overflow: hidden;
+		height: 0;
+		transition: height 0.5s;
+		background-color: rgba(255, 255, 255, 0.5);
+		text-align: justify;
+	}
+	
+	#text-box.expanded {
+		height: auto;
+	}
+	  
+	#collapse-button {
+		flex: 1;
+		margin-right: 20px;
+	
+	}
+
+	#text-box-wrapper {
+		display: block;
+		width: 100%;
+		margin-top: 10px; /* You can adjust the distance between the button and the text box */
 	}

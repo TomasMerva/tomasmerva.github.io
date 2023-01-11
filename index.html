@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+		<script src="collapse_button.js"></script>
 
 		<!-- Header -->
 			<div id="header">
@@ -120,14 +121,48 @@
 						</header>
 						
 						<div class="row">
-							<!-- Research overview -->
+							<!-- SAC ROS -->
 							<div class="col-3 col-12-mobile">
-								<span class="image profil"><img src="images/sac.png" alt="" /></span>
+								<img src="images/sac.png" alt="" style="width:240px;height:270px;"> 
 							</div>
-							<!-- Interests overview -->
 							<div class="col-9 col-12-mobile">
 								<h3 align="left">Reinforcement learning in robotic arm position control</h3>
-
+								<p align="left">Master's thesis<br>
+									Implementing the Soft Actor-Critic and Hindsight
+									Experience Replay algorithms to solve two robotics
+									environments created in ROS.
+								</p>
+								<div id="collapse-button-container">
+									
+									<button><a href="Tomas_Merva.pdf" target="_blank">PDF</a></button>
+									<button><a href="https://youtu.be/GN2U0PE8QBk">Videos</a></button>
+									<button><a href="">Github</a></button>
+									<button id="collapse-button">Bibtex</button>
+								</div>
+								<div id="text-box-wrapper">
+									<div id="text-box">
+										<p>@article{22-driess-NeRF-RL-preprint,<br>
+											&nbsp;&nbsp;&nbsp;&nbsp;title={Reinforcement Learning with Neural Radiance Fields},<br>
+											&nbsp;&nbsp;&nbsp;&nbsp;author={Driess, Danny and Schubert, Ingmar and Florence, Pete and Li, Yunzhu and Toussaint, Marc},<br>
+											&nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2206.01634},<br>
+											&nbsp;&nbsp;&nbsp;&nbsp;year={2022}<br>
+										  }</p>
+									</div>
+								</div>
+								
+							</div>
+							<!-- Field oriented control of PMSM -->
+							<div class="col-3 col-12-mobile">
+								<!-- <span class="image project"><img src="images/field_oriented.jpg" alt="" /></span> -->
+								<img src="images/field_oriented.jpg" alt="" style="width:240px;height:270px;"> 
+							</div>
+							<div class="col-9 col-12-mobile">
+								<h3 align="left">Field oriented control of PMSM</h3>
+								<p align="left">
+									Implementing the position controller for a
+									synchronous motor using a microcontroller by Texas
+									Instruments.
+								</p>
 							</div>
 						</div>
 
