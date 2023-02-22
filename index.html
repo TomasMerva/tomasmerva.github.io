@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	Prologue by HTML5 UP
+	Helios by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
@@ -10,213 +10,200 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
-		<script src="collapse_button.js"></script>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
 
-		<!-- Header -->
-			<div id="header">
-				<div class="top">
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image profil"><img src="images/tomas_profil.jpg" alt="" /></span>
-							<h1 id="title">Tomas MERVA</h1>
-							<h4>PhD student</h4>
-							<br>
-						</div>
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Terminal  -->
+					<div class="inner">
+						<header>
+							<div class="terminal" id="my-terminal" data-welcome-text="Welcome to my page. Feel free to look around :)">
+								<div class="titlebar">
+								  <div class="title">tomas@merva-desktop:~</div>
+								</div>
+								<div class="content">
+								  <div class="line">
+									<span class="username">tomas@merva-desktop:~$</span>
+									<span id="welcome"></span>
+								  </div>
+								  <div class="line">
+									<pre id="ascii-text" style="display: none;"></pre>
+								  </div>
+								</div>
+							  </div>
+							  
+						</header>
+					</div>
+
 					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
-								<li><a href="#research" id="portfolio-link"><span class="icon solid fa-book">Research</span></a></li>
-								<li><a href="#projects" id="about-link"><span class="icon solid fa-folder-open">Projects</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
-				</div>
-
-				<div class="bottom">
-
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://github.com/TomasMerva" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://www.linkedin.com/in/tomas-merva/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="mailto:tmerva7@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							<li><a href="https://scholar.google.com/citations?user=PBZDFgEAAAAJ&hl=en" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="publications.html">Publications</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li>
+								<a href="#">Tutorials</a>
+								<ul>
+									<li><a href="tutorials_general.html">General information</a></li>
+								</ul>
+							</li>
+							<li><a href="contact_me.html">Contact</a></li>
 						</ul>
-
+					</nav>
 				</div>
 
-			</div>
-
-			<!-- Main stranka -->
-			<div id="main">
-				<!-- Intro -->
-				<section id="top" class="one dark cover">
-					<div class="container">
-						<header>
-							<h2 class="alt">
-								I am PhD student at the Department of Industrial Automation and Mechatronics
-								at <a href="https://www.tuke.sk/wps/portal"><strong>Technical University of Kosice</strong></a>, Slovakia.
-							</h2>
-							<p align="justify">
+				<!-- Introduction -->
+				<div class="wrapper style2">
+					<article id="main" class="container special">
+						<br>
+						<h3>About me</h3>
+						<p>
+							&nbsp &nbsp &nbsp &nbsp 
+							I obtained both my BSc and MSc degrees from the Faculty of Electrical Engineering and Informatics at the Technical University of Kosice, 
+							specializing in electrical drives, including the control of electric motors, power electronics, and microprocessors. While pursuing my studies, 
+							I developed a strong interest in robotics and decided to continue my academic journey by pursuing a PhD in robotics under the guidance of 
+							<a href="https://scholar.google.sk/citations?user=KaEEisQAAAAJ&hl=sk"><strong>Ivan VIRGALA</strong></a>. My research focuses on optimization-based 
+							motion planning and integrated Task and Motion Planning (TAMP). 
 							<br>
-							I have received my BSc and MSc degrees from the Faculty of Electrical Engineering and Informatics, Technical University of Kosice, both in electrical drives 
-							(control and construction of electric motors, power electronics, microprocessors). My research interest within my PhD studies is focused on the optimization-based 
-							integrated Task and Motion Planning (TAMP) under the supervision of <a href="https://scholar.google.sk/citations?user=KaEEisQAAAAJ&hl=sk"><strong>Ivan VIRGALA</strong></a>.
-							Before starting my PhD journey, I was a junior technician at the Department of Electrical Engineering and Mechatronics, where I programmed 
-							battery cells testers for analyzing charging and discharging effects. 
-							</p>
-						</header>
-					</div>
-				</section>
+							&nbsp &nbsp &nbsp &nbsp 
+							Prior to beginning my doctoral studies, I worked as a junior technician at the Department of Electrical Engineering and Mechatronics, 
+							where I programmed battery cell testers to analyze charging and discharging effects. I have also completed internships at several industrial companies,
+							where I gained valuable experience in PLC programming.
+						</p>
+						<h5>My research focus:</h5>
+						<ul>
+							<li>Robotic manipulators</li>
+							<li>Motion Planning</li>
+							<li>Optimization</li>
+						</ul>
+					</article>
 
-				<!-- Research -->
-				<section id="research" class="two">
-					<div class="container">
+				</div>
+		
+			<!-- Carousel -->
+			<!-- <section class="carousel">
+				<div class="reel">
+					<h2 align="center">News</h2>
+					<br>
+					<article>
+						<a class="image featured"><img src="images/ostrava.png" alt="" /></a>
 						<header>
-							<h2>Research</h2>
+							<h4>VSB-TUO visit</h4>
+						</header>
+						<p>
+						We have visited <a href="https://www.fs.vsb.cz/354/en"><b>VSB-TUO Department of robotics</b></a> to discuss future collaboration.
+						<br>
+						<i>01/2023</i>
+						</p>
+					</article>
+
+					<article>
+						<a class="image featured"><img src="images/bristol.jpeg" alt="" /></a>
+						<header>
+							<h4>Guest talk at BRL</h4>
+						</header>
+						<p>
+						Our research team has been at <a href="https://www.bristolroboticslab.com/"><b>Bristol Robotics Laboratory</b></a>, where we presented the results of our research. 
+						<br>
+						<i>12/2022</i>
+						</p>
+					</article>
+					<article>
+						<a class="image featured"><img src="images/misbot_dekan.jpeg" alt="" /></a>
+						<header>
+							<h4>MISbot</h4>
+						</header>
+						<p>
+						Our concept of <b>Minimally Invasive Surgery robot</b> was presented at Engineering Fair Nitra 2022.
+						<br>
+						<i>05/2022</i>
+						</p>
+					</article>
+				</div>
+			</section> -->
+
+			
+
+			<!-- Features
+				<div class="wrapper style1">
+
+					<section id="features" class="container special">
+						<header>
+							<h2>Morbi ullamcorper et varius leo lacus</h2>
+							<p>Ipsum volutpat consectetur orci metus consequat imperdiet duis integer semper magna.</p>
 						</header>
 						<div class="row">
-							<!-- Research overview -->
-							<div class="col-7 col-12-mobile">
-								<h2>Overview</h2>
-								<hr class="solid">
-								<p align="justify">
-									My current research focuses on sequential robotic manipulation (TAMP), in which a robot needs to autonomously find out the sequence of actions that
-									needs to perform in order to achieve the desired goal. The aim of my PhD studies is developing methods for reactive execution of such sequences.
-									<br><br>
-									My main application domain is robotic manipulators.
-								</p>			
-							</div>
-							<!-- Interests overview -->
-							<div class="col-5 col-12-mobile">
-								<h2>Interests</h2>
-								<hr class="solid">
-								<p align="justify">
-									<span class="icon solid fa-stop">&nbsp;&nbsp;Robotic manipulators</span>
-									<br>
-									<span class="icon solid fa-stop">&nbsp;&nbsp;Motion Planning</span>
-									<br>
-									<span class="icon solid fa-stop">&nbsp;&nbsp;Optimization</span>
+							<article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
+								<header>
+									<h3><a href="#">Gravida aliquam penatibus</a></h3>
+								</header>
+								<p>
+									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
+									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
 								</p>
-							</div>
-							<div class="col-7 col-12-mobile">
-								<h2>Publications</h2>										
-							</div>
-							<!-- Interests overview -->
-							<div class="col-5 col-12-mobile">
-							</div>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+								<header>
+									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
+								</header>
+								<p>
+									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
+									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
+								<header>
+									<h3><a href="#">Magna laoreet et aliquam</a></h3>
+								</header>
+								<p>
+									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
+									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+								</p>
+							</article>
 						</div>
-					</div>
+					</section>
 
-				</section>
+				</div> -->
 
-				<!-- Projects -->
-				<section id="projects" class="three">
-
-					<div class="container">
-						<header>
-							<h2>Projects</h2>
-						</header>
-						
-						<div class="row">
-							<!-- SAC ROS -->
-							<div class="col-3 col-12-mobile">
-								<img src="images/sac.png" alt="" style="width:240px;height:270px;"> 
-							</div>
-							<div class="col-9 col-12-mobile">
-								<h3 align="left">Reinforcement learning in robotic arm position control</h3>
-								<p align="left">Master's thesis<br>
-									Implementing the Soft Actor-Critic and Hindsight
-									Experience Replay algorithms to solve two robotics
-									environments created in ROS.
-								</p>
-								<div id="collapse-button-container">
-									
-									<button><a href="Tomas_Merva.pdf" target="_blank">PDF</a></button>
-									<button><a href="https://youtu.be/GN2U0PE8QBk">Videos</a></button>
-									<button><a href="">Github</a></button>
-									<button id="collapse-button">Bibtex</button>
-								</div>
-								<div id="text-box-wrapper">
-									<div id="text-box">
-										<p>@article{22-driess-NeRF-RL-preprint,<br>
-											&nbsp;&nbsp;&nbsp;&nbsp;title={Reinforcement Learning with Neural Radiance Fields},<br>
-											&nbsp;&nbsp;&nbsp;&nbsp;author={Driess, Danny and Schubert, Ingmar and Florence, Pete and Li, Yunzhu and Toussaint, Marc},<br>
-											&nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2206.01634},<br>
-											&nbsp;&nbsp;&nbsp;&nbsp;year={2022}<br>
-										  }</p>
-									</div>
-								</div>
-								
-							</div>
-							<!-- Field oriented control of PMSM -->
-							<div class="col-3 col-12-mobile">
-								<!-- <span class="image project"><img src="images/field_oriented.jpg" alt="" /></span> -->
-								<img src="images/field_oriented.jpg" alt="" style="width:240px;height:270px;"> 
-							</div>
-							<div class="col-9 col-12-mobile">
-								<h3 align="left">Field oriented control of PMSM</h3>
-								<p align="left">
-									Implementing the position controller for a
-									synchronous motor using a microcontroller by Texas
-									Instruments.
-								</p>
-							</div>
-						</div>
-
-					</div>
-				</section>
-
-				<!-- Contact -->
-				<section id="contact" class="four">
-					<div class="container">
-
-						<header>
-							<h2>Contact</h2>
-							<hr class="solid">
-						</header>
-						
-						<div class="row">
-							<div class="col-6 col-12-mobile">
-								<p align="left">
-									Feel free to contact me regarding my research or a potential colaboration.
-									<br><br>
-									<i class="icon solid fa-phone"></i><span>&emsp;office: +421 55 602 2346</span>
-									<br>
-									<i class="icon solid fa-envelope"></i><span>&emsp;tomas.merva@tuke.sk</span>
-									<br>
-									<i class="icon solid fa-envelope"></i><span>&emsp;tmerva7@gmail.com</span>
-								</p>
-							</div>
-							<div class="col-6 col-12-mobile">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d639.1729421120807!2d21.24563480646745!3d48.73207334206196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ee05f5efbdaa7%3A0x892ab78750990c6c!2s%C3%9Astav%20automatiz%C3%A1cie%2C%20mechatroniky%20a%20robotiky%20SjF%20TUKE!5e0!3m2!1ssk!2ssk!4v1671699751645!5m2!1ssk!2ssk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-							</div>
-						</div>
-					</div>
-				</section>
-
-			</div>
-
-		<!-- Footer -->
+			<!-- Footer -->
 			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="copyright">
+								<ul class="icons">
+									<li><a href="https://github.com/TomasMerva" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									<li><a href="https://www.linkedin.com/in/tomas-merva/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="mailto:tmerva7@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://scholar.google.com/citations?user=PBZDFgEAAAAJ&hl=en" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+								</ul>
+								<ul class="menu">
+									<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/terminal.js"></script>
 
 	</body>
 </html>
