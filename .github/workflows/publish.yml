@@ -11,10 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js version 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Generate static website
+        run: |
+          npm ci
+          npm run build
 
       - name: Publish the generated content to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.7.6
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: public
+          folder: dist
+          
+      
