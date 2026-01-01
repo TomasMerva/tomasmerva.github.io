@@ -1,0 +1,20 @@
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v6
+
+      - name: Publish the generated content to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.7.6
+        with:
+          branch: gh-pages
+          folder: public
