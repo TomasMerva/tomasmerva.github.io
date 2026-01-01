@@ -7,12 +7,22 @@ export default defineConfig({
   site: 'https://tomasmerva.github.io',
   integrations: [
     starlight({
-      title: 'My Docs',
-      social: [{
-        icon: 'github',
-        label: 'GitHub',
-        href: 'https://github.com/withastro/starlight'
-      }],
+      title: 'Tomas Merva',
+      components: {
+        Search: './src/components/no_search.astro',
+      },
+      social: [
+        {
+          icon: 'github',
+          label: 'GitHub',
+          href: 'https://github.com/TomasMerva'
+        },
+        {
+          icon: 'linkedin',
+          label: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/tomas-merva/'
+        }
+      ],
       sidebar: [
         {
           label: 'Guides',

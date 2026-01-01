@@ -1,40 +1,37 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Tomas Merva
+head:
+  - tag: title
+    content: Tomas Merva
+description: Tomas Merva
+template: splash # Remove or comment out this line to display the site sidebar on this page.  
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Robotics Software Engineer
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/profile.png
   actions:
-    - text: Example Guide
+    - text: CV
       link: /guides/example/
       icon: right-arrow
-    - text: Read the Starlight docs
+    - text: Projects
       link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+      icon: right-arrow
+    - text: Tutorials
+      link: /guides/example/
+      icon: right-arrow
 ---
+
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+<Card title="Hi, I am Tomas">
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+Lorem ipsum
+	
+</Card>
+	
+## News+
+- Oct 2025 | I started working on web
+- Oct 2025 | Our RA-L paper on Globally-Guided Geometric Fabrics presented at IROS
+- Jun 2025 | I successfully defended my PhD thesis
+- Mar 2025 | Our paper Globally-Guided Geometric Fabrics for Reactive Mobile Manipulation in Dynamic Environments is accepted for RA-L. Paper and code available via our website
