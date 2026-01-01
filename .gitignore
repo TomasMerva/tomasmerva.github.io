@@ -1,4 +1,4 @@
 .vscode
-.astro
-dist
-node_modules
+.astro/
+dist/
+node_modules/
