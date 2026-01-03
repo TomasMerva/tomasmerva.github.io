@@ -1,4 +1,3 @@
-import {Icon} from '@astrojs/starlight/components';
 import {docsLoader} from '@astrojs/starlight/loaders';
 import {docsSchema} from '@astrojs/starlight/schema';
 import {defineCollection} from 'astro:content';

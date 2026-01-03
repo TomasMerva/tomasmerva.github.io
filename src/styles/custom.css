@@ -1,0 +1,23 @@
+:root {
+  --sl-text-1xl: 1.0rem;
+  --sl-text-2xl: 1.25rem;
+  --sl-text-3xl: 1.5rem;
+  --sl-text-4xl: 1.8rem;
+  --sl-text-5xl: 2rem;
+  --sl-text-6xl: 2.4rem;
+}
+
+details {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--sl-color-gray-7);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.role { font-style: italic; }

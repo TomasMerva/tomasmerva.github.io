@@ -1,15 +1,27 @@
 ---
-title: Tomas Merva
+title: Hi, I am Tomas
 head:
   - tag: title
     content: Tomas Merva
-description: Tomas Merva
 template: splash # Remove or comment out this line to display the site sidebar on this page.  
 hero:
-  tagline: Robotics Software Engineer
+  tagline: |
+    I enjoy implementing robotics algorithms, with a primary focus on motion planning and real-world deployment on hardware.
+    Currently working as a <span class="role">Robotics Software Engineer</span> in the autonomous drone domain,
+    I began my career in industrial automation and embedded systems.
+    Over the past years, I transitioned into robotics, completing a PhD on motion planning for static and mobile manipulators.
   image:
     file: ../../assets/profile.png
   actions:
+    - text: Projects
+      link: /guides/projects/
+      icon: right-arrow
+    # - text: Tutorials
+    #   link: /guides/example/
+    #   icon: right-arrow
+---
+
+  {/* actions:
     - text: CV
       link: /guides/example/
       icon: right-arrow
@@ -18,20 +30,43 @@ hero:
       icon: right-arrow
     - text: Tutorials
       link: /guides/example/
-      icon: right-arrow
----
+      icon: right-arrow */}
 
+<details open>
+<summary><strong>TL;DR/Resume - <a href="/assets/Merva_CV.pdf" download>Click
+      here
+    </a> for detailed CV</strong></summary>
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+#### Experience
+- Robotics Software Engineer @ [Fly4Future](https://fly4future.com/) and [MRS CVUT](https://mrs.fel.cvut.cz/)
+- Visiting Researcher @ [AMR, TU Delft](https://autonomousrobots.nl/)
+- Research Engineer @ [KEM, TU Kosice](https://tuke.sk/en)
+- Robotics Software Development Intern @ [ZTS VVU a.s.](https://ztsvvu.com/)
 
-<Card title="Hi, I am Tomas">
+#### Education
+- PhD in Mechatronics @ [TU Kosice](https://tuke.sk/en)
+- MSc in Electrical Systems @ [TU Kosice](https://tuke.sk/en)
+- BSc in Automation @ [TU Kosice](https://tuke.sk/en)
+</details>
 
-Lorem ipsum
-	
+{/* 
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<Card title="TL;DR / Résumé" icon="file-text">
+- **Now:** Robotics / software engineer working on X  
+- **Focus:** Perception, motion planning, C++/ROS2  
+- **Previously:** Company A, Lab B  
+- **CV:** <a href="/cv/">Detailed CV</a>
 </Card>
+
+<CardGrid>
+  <LinkCard title="Projects" href="/projects/" />
+  <LinkCard title="Publications" href="/publications/" />
+  <LinkCard title="Contact" href="/contact/" />
+</CardGrid> */}
 	
-## News+
-- Oct 2025 | I started working on web
-- Oct 2025 | Our RA-L paper on Globally-Guided Geometric Fabrics presented at IROS
-- Jun 2025 | I successfully defended my PhD thesis
-- Mar 2025 | Our paper Globally-Guided Geometric Fabrics for Reactive Mobile Manipulation in Dynamic Environments is accepted for RA-L. Paper and code available via our website
+## News
+- <strong>Oct 2025</strong> | I started working as a Robotics Software Engineer at [Fly4Future](https://fly4future.com/) and [MRS CVUT](https://mrs.fel.cvut.cz/).
+- <strong>Oct 2025</strong> | Our RA-L paper on *Globally-Guided Geometric Fabrics* was presented at IROS. Paper and code are available via our [website](https://autonomousrobots.nl/paper_websites/g3f).
+- <strong>Jun 2025</strong> | I successfully defended my PhD thesis on motion planning and control for robotic manipulators.
+- <strong>Mar 2025</strong> | Our paper *Globally-Guided Geometric Fabrics for Reactive Mobile Manipulation in Dynamic Environments* was accepted for publication in RA-L. Paper and code are available via our [website](https://autonomousrobots.nl/paper_websites/g3f).
