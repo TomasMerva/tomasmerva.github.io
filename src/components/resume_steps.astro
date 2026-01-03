@@ -1,0 +1,36 @@
+---
+type Item = { title: string; icon?: string };
+
+const {
+  title,
+  items = [],
+  id,
+} = Astro.props as { title?: string; items: Item[]; id?: string };
+---
+
+<section id={id} class="resume-steps not-content">
+  {title && <h2 class="resume-title" set:html={title} />}
+  <ol class="resume-list">
+    {items.map((item) => (
+      <li class="resume-item">
+        <span class="resume-icon" aria-hidden="true">{item.icon ?? "🎓"}</span>
+        <span class="resume-text" set:html={item.title} />
+      </li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .resume-title { margin: 0 0 .75rem; font-size: 1.25rem; }
+  .resume-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
+  .resume-item {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: .75rem;
+    padding: .75rem 1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: .75rem;
+    background: var(--sl-color-gray-7);
+  }
+  .resume-icon { line-height: 1.25rem; }
+</style>
