@@ -1,7 +1,7 @@
 ---
 title: Projects
 description: Projects
-draft: true
+# draft: true
 ---
 
 <!-- Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.

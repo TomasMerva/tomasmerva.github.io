@@ -40,10 +40,6 @@ export default defineConfig({
             {label: 'Projects', slug: 'guides/projects'},
           ],
         },
-        // {
-        //   label: 'Reference',
-        //   autogenerate: {directory: 'reference'},
-        // },
       ],
     }),
   ],
