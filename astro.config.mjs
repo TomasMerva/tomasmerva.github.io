@@ -11,7 +11,7 @@ export default defineConfig({
       // logo: {
       //   src: './public/images/dinova_logo.png',
       // },
-      favicon: './public/images/dinova_logo.png',
+      favicon: '/images/dinova_logo.png',
       customCss: [
         // Relative path to your custom CSS file
         './src/styles/custom.css',
