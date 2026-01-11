@@ -1,0 +1,250 @@
+---
+import { Icon } from "@astrojs/starlight/components";
+import type { HTMLAttributes } from "astro/types";
+
+type Props = {
+  title: string;
+  href?: string;
+
+  imageSrc: string;
+  imageAlt?: string;
+
+  authors?: string;
+  dateText?: string;
+  description?: string;
+
+  target?: HTMLAttributes<"a">["target"];
+  rel?: HTMLAttributes<"a">["rel"];
+};
+
+const {
+  title,
+  href,
+  imageSrc,
+  imageAlt = "paper cover",
+  authors,
+  dateText,
+  description,
+  target,
+  rel,
+} = Astro.props as Props;
+
+const isVideo =
+  typeof imageSrc === "string" &&
+  (imageSrc.endsWith(".mp4") || imageSrc.endsWith(".webm") || imageSrc.endsWith(".ogg"));
+---
+
+<div class="sl-link-card brutalist-card push-on-hover not-content project-card">
+  {href ? (
+    <a class="project-card__stretched-link" href={href} target={target} rel={rel}>
+      <div class="project-card__row">
+        <div class="project-card__media-col" aria-hidden="true">
+          {isVideo ? (
+            <video
+              class="project-card__media"
+              src={imageSrc}
+              muted
+              autoplay
+              loop
+              playsinline
+              preload="metadata"
+            />
+          ) : (
+            <img class="project-card__media" src={imageSrc} alt={imageAlt} loading="lazy" />
+          )}
+        </div>
+
+        <div class="project-card__content">
+          <h3 class="project-card__title">{title}</h3>
+
+          {(authors || dateText) && (
+            <div class="project-card__meta">
+              <span class="project-card__authors">{authors ? authors : "\u00A0"}</span>
+              {dateText && <span class="project-card__sep">|</span>}
+              {dateText && <span class="project-card__date">{dateText}</span>}
+            </div>
+          )}
+
+          {description && <p class="project-card__desc">{description}</p>}
+
+          {/* ONLY show "More" if href exists */}
+          <div class="project-card__actions">
+            <span class="project-card__more">
+              More <Icon name="right-arrow" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  ) : (
+    <div class="project-card__static">
+      <div class="project-card__row">
+        <div class="project-card__media-col" aria-hidden="true">
+          {isVideo ? (
+            <video
+              class="project-card__media"
+              src={imageSrc}
+              muted
+              autoplay
+              loop
+              playsinline
+              preload="metadata"
+            />
+          ) : (
+            <img class="project-card__media" src={imageSrc} alt={imageAlt} loading="lazy" />
+          )}
+        </div>
+
+        <div class="project-card__content">
+          <h3 class="project-card__title">{title}</h3>
+
+          {(authors || dateText) && (
+            <div class="project-card__meta">
+              <span class="project-card__authors">{authors ? authors : "\u00A0"}</span>
+              {dateText && <span class="project-card__sep">|</span>}
+              {dateText && <span class="project-card__date">{dateText}</span>}
+            </div>
+          )}
+
+          {description && <p class="project-card__desc">{description}</p>}
+
+          {/* no "More" when no href */}
+        </div>
+      </div>
+    </div>
+  )}
+</div>
+
+<style>
+  /* Outer shell uses Starlight's .sl-link-card visuals.
+     Your custom "brutalist-card push-on-hover" classes can stay if you already have them globally. */
+
+  .project-card__stretched-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Like: row g-0 overflow-hidden flex-md-row */
+  .project-card__row {
+    display: flex;
+    gap: 0; /* g-0 */
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  /* Like: col-md-auto ... width="270" */
+  .project-card__media-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;          /* similar to ps-md-3 py-md-3 pt-3 feel */
+    flex: 0 0 auto;
+  }
+
+  /* fixed media width similar to width="270" */
+  .project-card__media {
+    width: 270px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;       /* optional; remove if you want natural */
+    object-fit: contain;       /* like object-fit-contain */
+    display: block;
+    border-radius: 0.75rem;
+    background: var(--sl-color-gray-6);
+  }
+
+  /* Like: col-md p-3 d-flex flex-column position-static */
+  .project-card__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  /* Like: h3 mb-1 fs-5 */
+  .project-card__title {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem; /* tweak to match your site */
+    line-height: 1.25;
+  }
+
+  /* Like: text-body-secondary small */
+  .project-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--sl-color-text-muted);
+    font-size: var(--sl-text-sm);
+  }
+
+  .project-card__authors {
+    font-style: italic;
+  }
+
+  .project-card__sep {
+    opacity: 0.7;
+  }
+
+  /* Like: p mb-auto */
+  .project-card__desc {
+    margin: 0 0 0.75rem 0;
+    color: var(--sl-color-text-muted);
+    font-size: var(--sl-text-sm);
+    line-height: var(--sl-line-height);
+    flex: 1 1 auto; /* pushes actions to bottom like mb-auto */
+  }
+
+  /* Like: d-flex justify-content-start gap-2 */
+  .project-card__actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  /* Like: icon-link icon-link-hover ... */
+  .project-card__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--sl-color-accent);
+    font-size: var(--sl-text-sm);
+  }
+
+  /* Responsive: stack on small screens (like flex-md-row) */
+  @media (max-width: 48rem) {
+    .project-card__row {
+      flex-direction: column;
+    }
+    .project-card__media {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+    /* Card shell */
+  .project-card {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 1rem;
+    background: var(--sl-color-bg);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  /* Hover / focus (keyboard & mouse) */
+  .project-card:hover,
+  .project-card:focus-within {
+    border-color: var(--sl-color-accent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* Keep focus ring accessible */
+  .project-card a:focus-visible {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 2px;
+}
+</style>

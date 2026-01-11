@@ -8,6 +8,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Tomas Merva',
+      // logo: {
+      //   src: './public/images/dinova_logo.png',
+      // },
+      favicon: './public/images/dinova_logo.png',
       customCss: [
         // Relative path to your custom CSS file
         './src/styles/custom.css',
@@ -37,7 +41,8 @@ export default defineConfig({
           label: 'Menu',
           items: [
             // Each item here is one entry in the navigation menu.
-            {label: 'Projects', slug: 'guides/projects'},
+            {label: 'About me', slug: 'index'},
+            {label: 'Research', slug: 'research/research'},
           ],
         },
       ],
