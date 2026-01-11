@@ -1,0 +1,103 @@
+---
+title: Research
+description: A list of my publications and projects over the years, including academic, professional, and personal work.
+tableOfContents: false
+template: doc
+prev: false
+next: false
+lastUpdated: true
+---
+<div class="research-intro">
+A list of my publications and projects over the years, including academic, professional, and personal work.
+</div>
+
+import ProjectCard from '../../../components/project_item.astro';
+import { CardGrid } from '@astrojs/starlight/components';
+
+<ProjectCard
+  title="Globally-Guided Geometric Fabrics for Reactive Mobile Manipulation in Dynamic Environments"
+  href="https://autonomousrobots.nl/paper_websites/g3f"
+  imageSrc="/images/projects/g3f/dinovas.mp4"
+  imageAlt="G3F"
+  authors="T. Merva*, S. Bakker*, M. Spahn, D. Zhao, I. Virgala, J. Alonso-Mora |  In RA-L, April 2025"
+  description="Globally-Guided Geometric Fabrics (G3F) is a framework for real-time motion generation 
+  along the full task horizon, by interleaving an optimization-based planner with a 
+  fast reactive geometric motion planner, called Geometric Fabrics (GF). 
+  The approach adapts the path and explores a multitude of acceptable target poses, 
+  while accounting for collision avoidance and the robot's physical constraints."
+/>
+
+<ProjectCard
+  title="Simulation-Guided Path Optimization for Resolving Interlocked Hook-Shaped Components"
+  imageSrc="/images/projects/vppi/success_fig.jpeg"
+  imageAlt="VPPI"
+  authors="T. Merva, P.J. Sincak, R. Rakay, M. Varga, M. Kelemen, I. Virgala |  In Applied Sciences, April 2025"
+  description="The motion planning framework for pick-and-place tasks that adapts robot motions to 
+  separate interlocked hook-shaped components. By optimizing sparse joint-space waypoints 
+  and evaluating candidate trajectories through physics-based simulation, 
+  the approach avoids explicit contact modeling while improving separation success over an industrial baseline."
+/>
+
+<ProjectCard
+  title="Reactive Grasp and Motion Planning for Adaptive Mobile Manipulation Among Obstacles"
+  href="https://youtu.be/AldMFKnlW3M"
+  imageSrc="/images/projects/rgf/multi_fabrics_grasp.png"
+  imageAlt="Dinova"
+  authors="T. Merva, S. Bakker, M. Spahn, I. Virgala, J. Alonso-Mora | In R:SS Workshop on Frontiers of Optimization for Robotics, April 2024"
+  description="The Reactive Grasp and Motion Generation (RGF) framework enables real-time, 
+  adaptive grasping and motion planning for mobile manipulators operating 
+  in close proximity. By combining vision-based grasp analysis, nonlinear optimization, 
+  and reactive geometric fabrics, the approach achieves reactive grasp selection and collision-free motion in shared, dynamic environments."
+/>
+
+
+<ProjectCard
+  title="Tendon-Driven Continuum Robot for Minimally Invasive Surgery"
+  href="https://www.sciencedirect.com/science/article/pii/S2405896324004555"
+  imageSrc="/images/projects/misbot/misbot.jpeg"
+  imageAlt="Misbot"
+  authors="M. Varga, P.J. Sincak, T. Merva, P. Marcinko, L. Mikova, E. Prada, M. Schnitzer, I. Virgala | In IFAC PDES 2024"
+  description="This project explores and compares continuum robot mechanical structures 
+  through proof-of-concept designs and experiments. It includes the development of the MISBOT system 
+  for minimally invasive surgery monitoring and open-source continuum robot models to evaluate key design trade-offs."
+/>
+
+<ProjectCard
+  title="Cyclic Tester of Battery Cells for Electric Vehicles"
+  imageSrc="/images/projects/battery_tester/tester.png"
+  imageAlt="Battery tester"
+  authors="J. Bilanský, T. Merva, J. Ivan, A. Marcinek, M. Lacko | 2021"
+  description="Design and implementation of a universal battery tester for charging and 
+  discharging electric vehicle cells under configurable test conditions. 
+  The tester supports user-defined charging parameters and multiple discharging modes, 
+  and communicates with a higher-level system to log measurement data for battery state-of-health diagnostics."
+/>
+
+<ProjectCard
+  title="Reinforcement Learning in Robotic Arm Position Control"
+  href="https://youtu.be/GN2U0PE8QBk"
+  imageSrc="/images/projects/master_thesis/sac_v2.png"
+  imageAlt="RL"
+  authors="T. Merva | 2020"
+  description="Master's thesis implementing the Soft Actor-Critic and Hindsight Experience Replay 
+  algorithms to solve two robotics environments created in ROS 1."
+/>
+
+
+<ProjectCard
+  title="Field oriented control of PMSM"
+  imageSrc="/images/projects/pmsm/field_oriented.jpg"
+  imageAlt="PMSM"
+  authors="T. Merva*, V. Petro*, L. Hric* | 2020"
+  description="Low-level embedded implementation of a cascaded control architecture (current, 
+  velocity, and position loops) for field-oriented control of a permanent-magnet 
+  synchronous motor on a Texas Instruments microcontroller."
+/>
+
+
+
+
+
+
+
+

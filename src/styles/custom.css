@@ -25,8 +25,37 @@ summary {
 /* italic font for front-page role */
 .role { font-style: italic; }
 
+
+/* This is for removing white gap if ToC is disabled for docs pages */
 @media (min-width: 50rem) {
-  .sl-container {
-    column-gap: 0.5rem !important; /* try 0.75rem or 0.5rem */
+  /* Doc-like layout: has sidebar, but ToC disabled -> remove centering/clamp */
+  html[data-has-sidebar]:not([data-has-toc]) main
+    :where(.content-panel, .sl-markdown-content, .sl-prose, main > :first-child) {
+    max-inline-size: 70rem !important;
+    margin-inline: 0 !important;
+  }
+}
+
+/* This is for extending the size of project items*/
+@media (min-width: 50rem) {
+  /* Break the project cards out of the text column */
+  html[data-has-sidebar]:not([data-has-toc]) .sl-markdown-content > .project-card {
+    /* Center the card within the available main area */
+    margin-inline: auto;
+
+    /* Make it wider than the text column */
+    max-inline-size: 92rem;
+
+    /* Keep some breathing room from the sidebar/right edge */
+    width: min(92rem, calc(100% + 10rem));
+  }
+}
+
+@media (min-width: 50rem) {
+  html[data-has-sidebar]:not([data-has-toc])
+  .research-intro {
+    margin-inline: auto;
+    max-inline-size: 92rem;
+    width: min(92rem, calc(100% + 10rem));
   }
 }

@@ -4,15 +4,13 @@ import type { HTMLAttributes } from "astro/types";
 
 type Props = {
   title: string;
-  href: string;
+  href?: string;
 
-  // media
   imageSrc: string;
   imageAlt?: string;
 
-  // meta
-  authors?: string;     // e.g. "A. Author, B. Author"
-  dateText?: string;    // e.g. "January 2026" (optional)
+  authors?: string;
+  dateText?: string;
   description?: string;
 
   target?: HTMLAttributes<"a">["target"];
@@ -32,52 +30,89 @@ const {
 } = Astro.props as Props;
 
 const isVideo =
-  imageSrc.endsWith(".mp4") ||
-  imageSrc.endsWith(".webm") ||
-  imageSrc.endsWith(".ogg");
+  typeof imageSrc === "string" &&
+  (imageSrc.endsWith(".mp4") || imageSrc.endsWith(".webm") || imageSrc.endsWith(".ogg"));
 ---
 
 <div class="sl-link-card brutalist-card push-on-hover not-content project-card">
-  <a class="project-card__stretched-link" href={href} target={target} rel={rel}>
-    <div class="project-card__row">
-      {/* left media column */}
-      <div class="project-card__media-col" aria-hidden="true">
-        {isVideo ? (
-          <video
-            class="project-card__media"
-            src={imageSrc}
-            muted
-            autoplay
-            loop
-            playsinline
-            preload="metadata"
-          />
-        ) : (
-          <img class="project-card__media" src={imageSrc} alt={imageAlt} loading="lazy" />
-        )}
-      </div>
-
-      {/* right content column */}
-      <div class="project-card__content">
-        <h3 class="project-card__title">{title}</h3>
-
-        <div class="project-card__meta">
-          {/* authors line (or empty line) */}
-          <span class="project-card__authors">{authors ? authors : "\u00A0"}</span>
-          {dateText && <span class="project-card__sep">|</span>}
-          {dateText && <span class="project-card__date">{dateText}</span>}
+  {href ? (
+    <a class="project-card__stretched-link" href={href} target={target} rel={rel}>
+      <div class="project-card__row">
+        <div class="project-card__media-col" aria-hidden="true">
+          {isVideo ? (
+            <video
+              class="project-card__media"
+              src={imageSrc}
+              muted
+              autoplay
+              loop
+              playsinline
+              preload="metadata"
+            />
+          ) : (
+            <img class="project-card__media" src={imageSrc} alt={imageAlt} loading="lazy" />
+          )}
         </div>
 
-        {description && <p class="project-card__desc">{description}</p>}
+        <div class="project-card__content">
+          <h3 class="project-card__title">{title}</h3>
 
-        <div class="project-card__actions">
-          <span class="project-card__more">
-            More <Icon name="right-arrow" />
-          </span>
+          {(authors || dateText) && (
+            <div class="project-card__meta">
+              <span class="project-card__authors">{authors ? authors : "\u00A0"}</span>
+              {dateText && <span class="project-card__sep">|</span>}
+              {dateText && <span class="project-card__date">{dateText}</span>}
+            </div>
+          )}
+
+          {description && <p class="project-card__desc">{description}</p>}
+
+          {/* ONLY show "More" if href exists */}
+          <div class="project-card__actions">
+            <span class="project-card__more">
+              More <Icon name="right-arrow" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  ) : (
+    <div class="project-card__static">
+      <div class="project-card__row">
+        <div class="project-card__media-col" aria-hidden="true">
+          {isVideo ? (
+            <video
+              class="project-card__media"
+              src={imageSrc}
+              muted
+              autoplay
+              loop
+              playsinline
+              preload="metadata"
+            />
+          ) : (
+            <img class="project-card__media" src={imageSrc} alt={imageAlt} loading="lazy" />
+          )}
+        </div>
+
+        <div class="project-card__content">
+          <h3 class="project-card__title">{title}</h3>
+
+          {(authors || dateText) && (
+            <div class="project-card__meta">
+              <span class="project-card__authors">{authors ? authors : "\u00A0"}</span>
+              {dateText && <span class="project-card__sep">|</span>}
+              {dateText && <span class="project-card__date">{dateText}</span>}
+            </div>
+          )}
+
+          {description && <p class="project-card__desc">{description}</p>}
+
+          {/* no "More" when no href */}
         </div>
       </div>
     </div>
-  </a>
+  )}
 </div>
 
 <style>
