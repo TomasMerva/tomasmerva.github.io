@@ -37,7 +37,8 @@ export default defineConfig({
           label: 'Menu',
           items: [
             // Each item here is one entry in the navigation menu.
-            {label: 'Projects', slug: 'guides/projects'},
+            {label: 'About me', slug: 'index'},
+            {label: 'Projects', slug: 'projects/projects'},
           ],
         },
       ],

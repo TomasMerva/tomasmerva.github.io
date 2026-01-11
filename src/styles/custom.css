@@ -1,3 +1,4 @@
+/* changing font sizes */
 :root {
   --sl-text-1xl: 1.0rem;
   --sl-text-2xl: 1.25rem;
@@ -5,6 +6,7 @@
   --sl-text-4xl: 1.8rem;
   --sl-text-5xl: 2rem;
   --sl-text-6xl: 2.4rem;
+  color-scheme: light;
 }
 
 details {
@@ -20,4 +22,11 @@ summary {
   margin-bottom: 0.5rem;
 }
 
+/* italic font for front-page role */
 .role { font-style: italic; }
+
+@media (min-width: 50rem) {
+  .sl-container {
+    column-gap: 0.5rem !important; /* try 0.75rem or 0.5rem */
+  }
+}
